@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Latitude Analysis Dashboard</title>
+
+    <!-- Bring in our bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Bring in our css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!---Navbar start-->
+    <!--navbar-expand-lg class enables you to see menu items when screen is not collapsed -->
+    <nav class="navbar navbar-expand-lg navbar-light flatten-bottom-padding mainNav">
+        <a class="navbar-brand" href="#">Latitude</a>
+        <!--data-target points to the menu items (#navbarSupportedContent) -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <!--This gives the hamburger icon-->
+            <span class="navbar-toggler-icon "></i></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!--navbar-nav wrapper for the list items. ml-auto margin left auto to position the list elements to right-->
+            <ul class="navbar-nav ml-auto">
+        <!--dropdown list items-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Plots
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown ">
+                        <a class="dropdown-item" href="visualization1.html">Max Temp</a>
+                        <a class="dropdown-item" href="visualization2.html">Humidity</a>
+                        <a class="dropdown-item" href="visualization3.html">Cloudiness</a>
+                        <a class="dropdown-item" href="visualization4.html">Wind Speed</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="comparisons.html">Comparison</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="datapage.html">Data</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!---Navbar end-->
+
+    <!-- Container to create grid -->
+    <div class="container custom-container">
+
+        <!-- Row -->
+        <div class = "row">
+            <!--This is column 1 of 2  -->
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+               <div class="card">
+                    <div class="card-body flatten-margin">
+                        <h5 class="title">Summary:Latitude vs. X</h5>
+                        <hr>
+                        <div class="row">
+                            <div style="width:50%"  > <!--class="col-lg-4 col-md-4 col-sm-4 col-xs-3"-->
+                                <img class="card-img" src="images/Fig1.png" alt="Card image cap">
+                            </div>
+   <!--class="col-lg-4 col-md-4 col-sm-4 col-xs-3"-->
+                            <div style="width:50%" >
+                                The purpose of this project was to analyze how weather
+                                        changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the
+                                        OpenWeatherMap API to assemble a dataset on over 500 cities.
+                            </div>  
+                         </div> 
+                        <!--  <div class="row"> -->
+   <!--class="col-lg-8 col-md-8 col-sm-8 col-xs-6"-->
+                            <div >After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude.
+                                Factors we looked at included: temperature, cloudiness, wind speed and humidity. This site
+                                provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and
+                                corelations witnessed
+                            </div>
+                      <!--   </div> -->
+                   </div>
+               </div>
+            </div>
+
+        <!-- This is column 2 of 2 -->
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="card">
+                <div class="card-body flatten-margin">
+                        <h5 class="title">Visualizations</h5>
+                    
+                    <hr>
+                    <div class="row ">
+                        <div class="viz1">
+                        <!--Adding html webpage link to image file  -->
+                            <a href="visualization1.html" target="_blank">
+                                <img class="card-img" src="images/Fig1.png" alt="City Latitude vs Max Temp">
+                            </a>
+                        </div>
+                        <div class="viz1">
+                        <!--Adding html webpage link to image file  -->
+                            <a href="visualization2.html" target="_blank">
+                                <img class="card-img" src="images/Fig2.png" alt="City Latitude vs Humidity">
+                            </a>
+                        </div>
+                        <div class="viz1">
+                        <!--Adding html webpage link to image file  -->
+                            <a href="visualization3.html" target="_blank">
+                                <img class="card-img" src="images/Fig3.png" alt="City Latitude vs Cloudiness" >
+                            </a>
+                        </div>
+                        <div class="viz1">
+                        <!--Adding html webpage link to image file  -->
+                            <a href="visualization4.html" target="_blank">
+                                <img class="card-img" src="images/Fig4.png" alt="City Latitude vs Wind Speed">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js "
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo "
+        crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js "
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 "
+        crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js "
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM "
+        crossorigin="anonymous "></script>
+</body>
+
+</html>
