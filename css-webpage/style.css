@@ -99,10 +99,10 @@ title {
     width:100%;
     
 }
-.header h5, p{
+.header,.data-headers h5, p{
     margin: 10px 0px 0px 20px;
 }
-.header p{
+.header ,.data-headers p{
     font-size:8pt;
 }
 .data-img p{
@@ -124,3 +124,5 @@ title {
     margin-top: 10px;
 
 }
+
+
